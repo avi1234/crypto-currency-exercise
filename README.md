@@ -1,1 +1,1 @@
-# crypto-currency-exercise info
+# crypto currency exercise repository. npm start to run.
