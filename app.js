@@ -2,7 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 
 const config = require('./config');
-const {logger, retry, appendToData} = require('./helpers')
+const {logger} = require('./helpers')
 const collectRatesData = require('./collectRatesData')
 
 const ratesRouter = require('./routes/ratesRoutes')

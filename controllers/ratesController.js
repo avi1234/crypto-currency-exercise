@@ -1,6 +1,6 @@
 const config = require('../config');
 const helpers = require('../helpers');
-const {logger, retry, appendToData, readFileLastLines, rateFilePath} = require('../helpers')
+const {logger, rateFilePath} = require('../helpers')
 
 /**
 * Parse 'from' and 'to' from the req
