@@ -48,7 +48,7 @@ const getRate = async (req, res) => {
 
     //create results as json
     const fileDataAsJson = fileData.split('\n').reduce((accumulator, line) => {
-        valuesInLine = line.split(';')
+        const valuesInLine = line.split(';')
         if(valuesInLine.length === 2)
             accumulator.push({date: valuesInLine[0], rate: valuesInLine[1]})
         return accumulator

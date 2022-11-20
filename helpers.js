@@ -1,7 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 const fsExtra = require('fs-extra')
-const { umask } = require('process')
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
@@ -52,6 +51,7 @@ const readFileLastLines = async (path, numOfLines) => {
     if(fs.existsSync(path)) {
         try {
             const { stdout, stderr } = await exec(`tail -n ${numOfLines} ${path}`)
+            if(stderr !== '') logger.error(`stderr: ${stderr}`)
             return stdout
         } catch (e) {
             logger.error(`error: ${e}`)
